@@ -4,13 +4,40 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
     <title>Trivia Game 2.0</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+/* BY DEFAULT SCALABILITY IS MADE FOR MOBILE DEVICES*/
+[class*='answers'] {
+  width: 100%;
+}
+[class*='mainWin']{
+  width: 100%;
+}
+
+      /* 600px for TABLET DESIGN:*/ 
+      @media screen and (min-width:600px) {
+        .answers {
+          width:49%;
+          margin: 2vw 0 0 0.5vw ; 
+
+        }   /* 768 PX AND MORE FOR DESKTOP COMP DESIGN SCALABILITY*/
+        @media screen and (min-width:768px) {
+        .mainWin {
+          width:70%; },
+        .answers{
+          width: 40%;
+          margin: 0, auto;
+        }
+      
+          </style>
 </head>
 <body>
 <div class="container">
     <header>
-      <div id='score'>0</div>
+      <div id='score'> Score 0</div>
       <div id='gameName'><h1>Trivia Game 2.0</h1></div>
       <div id='questNum'>Question #1</div>
     </header>
@@ -26,10 +53,10 @@
 
    
         
-            <p class = 'answers'id = 'box1'>answer1</p>
-            <p class ='answers'id = 'box2'>answer2</p>
-            <p class ='answers'id = 'box3'>answer3</p>
-            <p class = 'answers'id = 'box4'>answer4</p>
+            <p class = 'answers'id = 'box1'>OPTION A</p>
+            <p class ='answers'id = 'box2'>OPTION B</p>
+            <p class ='answers'id = 'box3'>OPTION C</p>
+            <p class = 'answers'id = 'box4'>OPTION D</p>
         
   </div>
 </div>
